@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:srcCompat="@drawable/ic_undraw_at_home_octe"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/name"
+        android:background="@drawable/e_background"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/password"
+        android:background="@drawable/e_background"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+
+        android:id="@+id/c_password"
+        android:background="@drawable/e_background"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/email"
+        android:background="@drawable/e_background"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        app:layout_constraintEnd_toEndOf="@+id/c_password"
+        app:layout_constraintStart_toStartOf="@+id/c_password"
+        app:layout_constraintTop_toBottomOf="@+id/c_password" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:backgroundTint="#ECC656"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/s_google"
+        android:backgroundTint="#DAAA1B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_icons8_google"
+        android:text="@string/sign_in_with_google"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
+
+    <TextView
+        android:id="@+id/f_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/forgot_password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#378DD1"
+        app:layout_constraintBottom_toBottomOf="@+id/loginbtn"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toEndOf="@+id/loginbtn"
+        app:layout_constraintTop_toTopOf="@+id/loginbtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
